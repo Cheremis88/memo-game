@@ -1,0 +1,39 @@
+.card {
+  aspect-ratio: 1 / 1;
+  perspective: 300px;
+}
+
+.card__inner {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card:hover .card__inner {
+  transform: rotateY(-180deg);
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  inset: 0;
+  padding: 10%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px gray;
+}
+
+.card__back {
+  background-color: rgb(240, 255, 188);
+}
+
+.card__front {
+  transform: rotateY(-180deg);
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+}

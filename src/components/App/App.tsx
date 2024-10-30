@@ -1,11 +1,10 @@
-import Card from '../Card/Card';
-import CARDS from '../../constants/cards';
+import CardBoard from '../CardBoard/CardBoard';
 import './App.css';
 
 const App = () => {
   return (
     <div className="wrap">
-      <Card card={CARDS[9]} />
+      <CardBoard />
     </div>
   )
 }

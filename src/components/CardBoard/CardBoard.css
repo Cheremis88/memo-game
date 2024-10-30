@@ -1,0 +1,10 @@
+.card-board {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+}
+
+.inactive {
+  pointer-events: none;
+}

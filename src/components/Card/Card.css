@@ -1,16 +1,26 @@
 .card {
   aspect-ratio: 1 / 1;
   perspective: 300px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotate(5deg) translateY(-5px);
+}
+
+.card:has(.turned) {
+  pointer-events: none;
 }
 
 .card__inner {
   position: relative;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: 0.8s;
 }
 
-.card:hover .card__inner {
+.turned {
   transform: rotateY(-180deg);
 }
 
@@ -31,6 +41,7 @@
 
 .card__front {
   transform: rotateY(-180deg);
+  background-color: white;
 }
 
 .card__image {

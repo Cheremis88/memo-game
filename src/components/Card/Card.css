@@ -1,7 +1,7 @@
 .card {
   aspect-ratio: 1 / 1;
   perspective: 300px;
-  transition: 0.3s;
+  transition: 0.5s;
   cursor: pointer;
 }
 
@@ -17,11 +17,7 @@
   position: relative;
   height: 100%;
   transform-style: preserve-3d;
-  transition: 0.8s;
-}
-
-.turned {
-  transform: rotateY(-180deg);
+  transition: 0.5s;
 }
 
 .card__front,
@@ -42,9 +38,18 @@
 .card__front {
   transform: rotateY(-180deg);
   background-color: white;
+  transition: background-color 1s;
 }
 
 .card__image {
   display: block;
   width: 100%;
+}
+
+.turned {
+  transform: rotateY(-180deg);
+}
+
+.matched {
+  background-color: rgb(163, 252, 163);
 }

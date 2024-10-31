@@ -6,14 +6,16 @@ interface ICardProps {
   card: TCard;
   onTurn: (card: TCard) => void;
   isTurned: boolean;
+  isMatched: boolean;
 }
 
-const Card = ({ card, onTurn, isTurned }: ICardProps) => {
+const Card = ({ card, onTurn, isTurned, isMatched }: ICardProps) => {
   const randomRotate = useMemo(
-    () => Math.floor(Math.random() * 17 - 8),
+    () => Math.floor(Math.random() * 21 - 10),
     [card]
   );
   const cardClass = isTurned ? 'card__inner turned' : 'card__inner';
+  const frontClass = isMatched ? 'card__front matched' : 'card__front';
 
   return (
     <div
@@ -23,7 +25,7 @@ const Card = ({ card, onTurn, isTurned }: ICardProps) => {
     >
       <div className={cardClass}>
         <div className="card__back"></div>
-        <div className="card__front">
+        <div className={frontClass}>
           <img className="card__image" src={card.image} alt={card.name} />
         </div>
       </div>

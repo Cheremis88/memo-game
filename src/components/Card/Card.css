@@ -28,20 +28,33 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 8px;
-  box-shadow: 1px 1px 4px gray;
 }
 
 .card__back {
-  background-color: rgb(240, 255, 188);
+  box-shadow: 1px 1px 4px rgb(87, 2, 81);
+  background: conic-gradient(
+      from 195deg at 50% 0%,
+      rgb(213, 157, 206) 0%,
+      rgb(226, 180, 206) 50%,
+      rgb(207, 142, 197) 100%
+    )
+    40% 85%/175% 115%;
 }
 
 .card__front {
   transform: rotateY(-180deg);
-  background-color: white;
   transition: 0.2s 0.5s;
+  box-shadow: 1px 1px 4px rgb(77, 77, 77);
+  background: linear-gradient(
+    140deg,
+    rgb(255, 255, 255) 30%,
+    rgb(206, 206, 206) 100%
+  );
 }
 
 .card__image {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
 }
@@ -51,12 +64,35 @@
 }
 
 .matched {
-  background-color: rgb(163, 252, 163);
+  overflow: hidden;
   animation: zoom 0.2s 0.5s 2 alternate linear;
+  box-shadow: 1px 1px 4px rgb(7, 117, 62);
+}
+
+.matched::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: bg-opacity 0.2s 0.5s linear forwards;
+  background: linear-gradient(
+    140deg,
+    rgb(192, 238, 188) 20%,
+    rgb(200, 237, 182) 40%,
+    rgb(165, 230, 158) 60%,
+    rgb(134, 222, 145) 80%,
+    rgb(111, 214, 147) 100%
+  );
 }
 
 @keyframes zoom {
   to {
     scale: 1.1;
+  }
+}
+
+@keyframes bg-opacity {
+  to {
+    opacity: 1;
   }
 }

@@ -1,3 +1,5 @@
+@import './fonts/fonts.css';
+
 *,
 *::before,
 *::after {
@@ -17,9 +19,4 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-body {
-  min-width: 360px;
-  min-height: 100dvh;
 }

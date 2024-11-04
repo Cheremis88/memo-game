@@ -1,12 +1,15 @@
+import { useState } from 'react';
+import defineTheme from '../../helpers/defineTheme';
+import Layout from '../Layout/Layout';
 import CardBoard from '../CardBoard/CardBoard';
-import './App.css';
 
 const App = () => {
+  const [theme, setTheme] = useState<'light' | 'dark'>(defineTheme());
   return (
-    <div className="wrap">
+    <Layout theme={theme}>
       <CardBoard />
-    </div>
-  )
-}
+    </Layout>
+  );
+};
 
 export default App;

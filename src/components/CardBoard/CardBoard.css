@@ -1,6 +1,13 @@
 .card-board {
-  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 5px;
+  gap: 3px;
+}
+
+.title {
+  font-family: var(--font-main);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-main);
+  margin-bottom: 50px;
 }

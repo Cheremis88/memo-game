@@ -6,7 +6,7 @@ import Card from '../Card/Card';
 import './CardBoard.css';
 
 const CardBoard = () => {
-  const [cards, setCards] = useState(shuffle([...CARDS]));
+  const [cards, setCards] = useState(CARDS);
   const [turnedCards, setTurnedCards] = useState<TCard[]>([]);
   const [matchedCards, setMatchedCards] = useState<TCard[]>([]);
   const [move, setMove] = useState(0);
@@ -41,8 +41,6 @@ const CardBoard = () => {
   }
 
   return (
-    <>
-    <h1>Количество ходов: {move}</h1>
     <section className="card-board">
       {cards.map((card) => (
         <Card
@@ -54,7 +52,6 @@ const CardBoard = () => {
         />
       ))}
     </section>
-    </>
   );
 };
 

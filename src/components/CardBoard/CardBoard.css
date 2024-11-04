@@ -2,12 +2,10 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 3px;
+  transition: 0.5s 0.5s;
 }
 
-.title {
-  font-family: var(--font-main);
-  font-size: 40px;
-  font-weight: 400;
-  color: var(--color-main);
-  margin-bottom: 50px;
+.inactive {
+  pointer-events: none;
+  opacity: 0;
 }

@@ -3,10 +3,11 @@
   --bg-front: #d1d1c5;
   --bg-back: #cccc3b;
   --bg-matched: #5dcf40;
+  --bg-switcher: #369ea5;
   --shadow-front: #50504a;
   --shadow-back: #4b4b16;
   --shadow-matched: #234e18;
-  --color-main: #226569;
+  --color-main: #1f5c5f;
   --font-main: Neucha, sans-serif;
 
   display: flex;
@@ -21,6 +22,7 @@
   --bg-front: #81816d;
   --bg-back: #808026;
   --bg-matched: #377c27;
+  --bg-switcher: #12494d;
   --shadow-front: #2b2b23;
   --shadow-back: #25250b;
   --shadow-matched: #12290d;

@@ -1,9 +1,10 @@
 import { ReactNode } from 'react';
+import { TTheme } from '../../constants/types';
 import './Layout.css';
 
 interface ILayoutProps {
   children: ReactNode;
-  theme: 'light' | 'dark';
+  theme: TTheme;
 }
 
 const Layout = ({ children, theme }: ILayoutProps) => {

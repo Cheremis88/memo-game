@@ -1,0 +1,88 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+.moves {
+  font-family: var(--font-main);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-main);
+}
+
+.game-button {
+  position: relative;
+  appearance: none;
+  color: var(--color-main);
+  background-color: transparent;
+  border: 2px solid var(--color-main);
+  outline: none;
+  font-family: var(--font-main);
+  font-size: 30px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.game-button:hover {
+  color: var(--bg-front);
+}
+
+.game-button::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-color: var(--color-main);
+  scale: 0 1;
+  transition: 0.3s;
+}
+
+.game-button:hover::before {
+  scale: 1 1;
+}
+
+.game-button:disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.switcher {
+  position: relative;
+  display: block;
+  width: 100px;
+  aspect-ratio: 2 / 1;
+  background-color: var(--bg-switcher);
+  border: 2px solid var(--color-main);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.switcher::before {
+  content: '';
+  position: absolute;
+  top: 16%;
+  width: 33%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  transition: 0.3s;
+  left: 54.5%;
+  background-color: inherit;
+  box-shadow: inset 8px -6px 0px 0px var(--bg-front);
+}
+
+.switcher:has(input:checked)::before {
+  left: 12.5%;
+  background-color: var(--bg-back);
+  box-shadow: none;
+}
+
+.switcher__checkbox {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,11 +1,17 @@
 .card-board {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 3px;
   transition: 0.5s 0.5s;
+  gap: 3px;
 }
 
 .inactive {
   pointer-events: none;
   opacity: 0;
+}
+
+@media (orientation: portrait) {
+  .card-board {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  margin-bottom: 30px;
+  margin-bottom: 4svmin;
 }
 
 .moves {
@@ -85,4 +85,16 @@
   appearance: none;
   margin: 0;
   padding: 0;
+}
+
+@media (width < 600px) or (height < 600px) {
+  .moves {
+    font-size: 30px;
+  }
+  .game-button {
+    font-size: 22px;
+  }
+  .switcher {
+    width: 80px;
+  }
 }

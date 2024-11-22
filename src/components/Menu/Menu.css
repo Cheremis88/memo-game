@@ -26,6 +26,7 @@
   cursor: pointer;
   transition: 0.3s;
   z-index: 1;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .game-button:hover {
@@ -60,6 +61,7 @@
   border: 2px solid var(--color-main);
   border-radius: 100px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .switcher::before {

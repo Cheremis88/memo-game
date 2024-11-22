@@ -3,6 +3,7 @@
   perspective: 300px;
   transition: 0.5s;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card:hover {
